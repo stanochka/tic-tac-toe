@@ -1,0 +1,28 @@
+body {
+  background: #1D6A4F;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Open Sans", sans-serif;
+  color : white;
+}
+
+#gameboard {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 300px;
+  height: 300px;
+  background: #DBF6EB;
+  margin: 20px;
+}
+
+.cell {
+  border: solid 1px #1D6A4F;
+  color: #1D6A4F;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+}
