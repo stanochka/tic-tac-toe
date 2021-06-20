@@ -20,6 +20,10 @@ const Gameboard = (() => {
             array.splice(div.id, 1, div.textContent);
           };
         };
+        if (array.every(el => el !== '')) {
+          result.textContent = "It's a tie!";
+          return clearBoard();
+        };
         if (checkResult(array)) {
           console.log(winner);
           result.textContent = winner + ' wins!';
