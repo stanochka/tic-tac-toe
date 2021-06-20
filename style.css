@@ -26,3 +26,8 @@ body {
   width: 100px;
   height: 100px;
 }
+
+#result {
+  font-size: 2em;
+  margin: 10px;
+}
