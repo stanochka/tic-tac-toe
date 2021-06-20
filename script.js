@@ -60,15 +60,9 @@ const Gameboard = (() => {
 
 //factory function
 const Player = () => {
-  //TODO: write function choosing player
-  const turn = () => console.log('Player first!');
+  const button = document.querySelector('.checkcontainer');
+  const turn = () => { button.value };
   return { turn };
 };
-
-//module Computer
-const Computer = (() => {
-  const move = 
-  return { move };
-})();
 
 Gameboard.play('x');

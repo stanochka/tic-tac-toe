@@ -31,3 +31,12 @@ body {
   font-size: 2em;
   margin: 10px;
 }
+
+.checkcontainer {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  font-size: 2em;
+  justify-content: space-between;
+  width: 100px;
+}
