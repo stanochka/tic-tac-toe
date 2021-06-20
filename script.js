@@ -5,6 +5,7 @@ const Gameboard = (() => {
   const board = document.querySelectorAll('#gameboard>.cell');
   const result = document.querySelector('#result');
   const play = (turn) => {
+    console.log(players);
     board.forEach(div => {
       div.addEventListener('click', () => {
         if (turn === 'x') {
@@ -46,9 +47,7 @@ const Gameboard = (() => {
     return winningCombinations.some(combination => {
       if (combination.every(el => el !== '') &&
           combination.every(el => el === combination[0])) {
-        winner = combination[0];
-        //console.log(winningCombinations.indexOf(combination));
-        //TODO: change text color of winning combination on the board
+        winner = players[combination[0]];
         return true;
       };
     });
@@ -62,11 +61,12 @@ const Gameboard = (() => {
   };
 })();
 
-//factory function
-const Player = () => {
-  const button = document.querySelector('.checkcontainer');
-  const turn = () => { button.value };
-  return { turn };
+const player1 = document.querySelector('#nameInput>#x');
+const player2 = document.querySelector('#nameInput>#o');
+const players = {};
+const saveName = () => {
+  players[player1.id] = player1.value;
+  players[player2.id] = player2.value;
 };
 
 Gameboard.play('x');

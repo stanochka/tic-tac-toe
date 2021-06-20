@@ -32,11 +32,12 @@ body {
   margin: 10px;
 }
 
-.checkcontainer {
-  display: flex;
-  align-items: center;
+#nameInput {
   margin: 10px;
-  font-size: 2em;
-  justify-content: space-between;
-  width: 100px;
+  width: 250px;
+}
+
+#nameInput>input {
+  padding: 5px;
+  margin: 10px;
 }

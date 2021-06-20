@@ -9,11 +9,12 @@
     </head>
     <body>
       <h1>Tic Tac Toe</h1>
-      <div class="checkcontainer">
-      <input type="radio" id="x" name="player" value="x">
-      <label for="x">x</label><br>
-      <input type="radio" id="o" name="player" value="o">
-      <label for="o">o</label>
+      <div id="nameInput">
+      <label for="x">Player 1: </label>
+      <input type="text" id="x" name="player1" value='Player 1' onchange='saveName()'>
+      <br>
+      <label for="o">Player 2: </label>
+      <input type="text" id="o" name="player2" value='Player 2' onchange='saveName()'>
       </div>
       <div id=gameboard>
         <div class='cell' id='0'></div>
