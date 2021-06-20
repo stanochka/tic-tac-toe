@@ -1,11 +1,9 @@
-//module
 const Gameboard = (() => {
   let array = ['', '', '', '', '', '', '', '', ''];
   let winner;
   const board = document.querySelectorAll('#gameboard>.cell');
   const result = document.querySelector('#result');
   const play = (turn) => {
-    console.log(players);
     board.forEach(div => {
       div.addEventListener('click', () => {
         if (turn === 'x') {
@@ -26,8 +24,8 @@ const Gameboard = (() => {
           return clearBoard();
         };
         if (checkResult(array)) {
-          console.log(winner);
           result.textContent = winner + ' wins!';
+          turn = 'x';
           return clearBoard();
         };
       });
@@ -69,4 +67,5 @@ const saveName = () => {
   players[player2.id] = player2.value;
 };
 
+saveName();
 Gameboard.play('x');
